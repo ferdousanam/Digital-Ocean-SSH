@@ -27,4 +27,5 @@ jobs:
             ls -al
             git remote -v
             git branch
+            git branch --show-current
             git pull origin $PULL_FROM_BRANCH
