@@ -11,6 +11,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # DOC: https://github.com/marketplace/actions/ssh-remote-commands
       - name: Executing remote command
         uses: appleboy/ssh-action@master
         env:
@@ -21,8 +22,9 @@ jobs:
           PORT: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
           script: |
+            whoami
             cd /var/www/garivaradev
-            ls -l
+            ls -al
             git remote -v
             git branch
             git pull origin $PULL_FROM_BRANCH
