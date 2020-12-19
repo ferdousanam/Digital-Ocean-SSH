@@ -11,7 +11,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Executing remote command
         uses: appleboy/ssh-action@master
         env:
