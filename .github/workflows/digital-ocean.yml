@@ -20,4 +20,4 @@ jobs:
           PORT: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd /var/www/garivaradev && ll
+            cd /var/www/garivaradev && ls -l
