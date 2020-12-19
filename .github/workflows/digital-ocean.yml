@@ -26,6 +26,6 @@ jobs:
             ls -al
             git remote -v
             git branch
+            git checkout $PULL_FROM_BRANCH
             git branch --show-current
             git pull origin $PULL_FROM_BRANCH
-            cat .env
