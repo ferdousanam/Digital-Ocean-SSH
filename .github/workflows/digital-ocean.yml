@@ -20,4 +20,6 @@ jobs:
           PORT: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd /var/www/garivaradev && ls -l
+            cd /var/www/garivaradev
+            ls -l
+            git remote -v
