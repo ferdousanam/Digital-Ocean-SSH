@@ -10,8 +10,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Install speedtest-cli
+        run: sudo apt-get install speedtest-cli
+      - name: Test Internet Speed
+        run: speedtest
       # DOC: https://github.com/marketplace/actions/ssh-remote-commands
-      - name: Executing remote command
+      - name: Executing remote SSH command
         uses: appleboy/ssh-action@master
         env:
           PULL_FROM_BRANCH: ${{ secrets.PULL_FROM_BRANCH }}
