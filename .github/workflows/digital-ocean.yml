@@ -14,6 +14,8 @@ jobs:
         run: sudo apt-get install speedtest-cli
       - name: Test Internet Speed
         run: speedtest
+      - name: Check Node Version
+        run: node -v
       # DOC: https://github.com/marketplace/actions/ssh-remote-commands
       - name: Executing remote SSH command
         uses: appleboy/ssh-action@master
