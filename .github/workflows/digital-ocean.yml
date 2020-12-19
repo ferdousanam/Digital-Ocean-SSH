@@ -1,13 +1,12 @@
 name: Digital Ocean
+# Using this configuration we can deploy project using SSH & github on Digital Ocean VPS
 
 on:
   push:
-    # Publish `master` as Docker `latest` image.
     branches:
       - master
 
 jobs:
-  #Run the container in droplet
   deploy:
     runs-on: ubuntu-latest
     steps:
